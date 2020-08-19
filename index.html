@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="src/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cbd833b87c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" id="axios"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="back">
+        <img src="src/illustration.png" width="300px" />
+
+        <h3 id="location">
+          Amsterdam
+        </h3>
+
+        <div class="row" id="current-day">
+          <div class="col-4">
+            <span id="main-temp"> 19ºC</span>
+
+            <br />
+
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="col-4">
+            <span id="humidity"> 57%</span> <br />
+            <i class="fas fa-tint"></i>
+          </div>
+          <div class="col-4">
+            <span id="wind"> 23km/ </span>
+            <br />
+            <i class="fas fa-wind"></i>
+          </div>
+        </div>
+
+        <br />
+        <p id="day-time">
+          Today, 13:45
+        </p>
+        <h4 class="search">
+          <form id="search-city">
+            <input
+              id="city-input"
+              type="search"
+              placeholder="Enter city"
+              autofocus="on"
+              autocomplete="off"
+            />
+
+            <input type="submit" value="Go" />
+
+            <button id="current-location-button">Current Location</button>
+          </form>
+        </h4>
+
+        <h2>
+          Weather for the coming days
+        </h2>
+
+        <div class="row" id="coming-days">
+          <div class="col-2">
+            Fri <br />
+            <i class="fas fa-cloud-rain"></i>23°C
+          </div>
+          <div class="col-2">
+            Sat <br /><i class="fas fa-cloud-showers-heavy"></i>21°C
+          </div>
+
+          <div class="col-2">
+            Sun<br />
+            <i class="fas fa-cloud-rain"></i>21°C
+          </div>
+          <div class="col-2">
+            Mon <br /><i class="fas fa-cloud-rain"></i>20°C
+          </div>
+          <div class="col-2">
+            Tue <br /><i class="fas fa-cloud-showers-heavy"></i>21°C
+          </div>
+          <div class="col-2">
+            Wed <br /><i class="fas fa-cloud-rain"></i>22°C
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
