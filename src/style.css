@@ -63,3 +63,13 @@ img {
   color: #193d8a;
   font-size: 27px;
 }
+
+#link-text {
+  color: #193d8a;
+  text-align: center;
+  font-size: 10px;
+}
+
+#link {
+  color: purple;
+}
