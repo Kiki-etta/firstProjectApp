@@ -11,6 +11,7 @@
     #a2b6df 100%
   );
   border-radius: 40px;
+  border: #0c3483 solid;
 }
 
 #day-time {
@@ -62,7 +63,8 @@ h4 {
 }
 
 .fa-wind,
-.fa-tint {
+.fa-tint,
+.fa-cloud-sun {
   color: white;
   font-size: 27px;
 }
