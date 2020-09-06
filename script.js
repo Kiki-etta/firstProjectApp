@@ -1,4 +1,4 @@
-function formatDate(date) {
+function formatDate(timestamp) {
   let now = new Date();
   let days = [
     "Sunday",
@@ -28,6 +28,7 @@ function formatDate(date) {
   let day = days[now.getDay()];
   let month = months[now.getMonth()];
   let currentDate = now.getDate();
+
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -36,7 +37,20 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day},${hours}:${minutes} ${month} ${currentDate}, ${year} `;
+  return `${day} ${hours}:${minutes} ${month} ${currentDate}, ${year} `;
+}
+
+function formatHours(timestamp) {
+  let now = new Date(timestamp);
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
 }
 
 let updatedToday = document.querySelector("#day-time");
@@ -67,6 +81,27 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#coming-days");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+  <div class="col-2">
+            ${formatHours(forecast.dt * 1000)}
+            <br />
+            <img 
+            src= "http://openweathermap.org/img/wn/${
+              forecast.weather[0].icon
+            }@2x.png"
+            />
+            ${Math.round(forecast.main.temp)}°
+  </div>`;
+  }
 }
 
 function searchCity(city) {

@@ -39,11 +39,11 @@ h4 {
   text-align: center;
 }
 
-img {
+#icon {
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-  width: 200px;
+  width: 50px;
 }
 #current-day {
   font-size: 30px;
@@ -77,6 +77,14 @@ img {
   color: purple;
 }
 
-#icon {
+#main-img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  border: #a2b6df solid;
+  border-radius: 20px;
+}
+
+img {
   width: 50px;
 }
