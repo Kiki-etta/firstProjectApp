@@ -35,13 +35,14 @@
           Amsterdam
         </h3>
 
-        <div class="row" id="current-day">
+        <class class="row" id="current-day">
           <div class="col-4">
             <span id="main-temp"> 19ºC</span>
             <br />
             <img class="fa-cloud-sun" src="" id="icon" />
             temperature
           </div>
+
           <div class="col-4">
             <span id="humidity"> 57%</span> <br />
             <i class="fas fa-tint"></i><br />
@@ -53,40 +54,45 @@
             <i class="fas fa-wind"></i><br />
             wind speed
           </div>
-        </div>
+        </class>
+      
+      <br />
 
-        <br />
+      <h4 class="search">
+        <form id="search-city">
+          <input
+            id="city-input"
+            type="search"
+            placeholder="Enter city"
+            autofocus="on"
+            autocomplete="off"
+          />
 
-        <h4 class="search">
-          <form id="search-city">
-            <input
-              id="city-input"
-              type="search"
-              placeholder="Enter city"
-              autofocus="on"
-              autocomplete="off"
-            />
+          <input type="submit" value="Go" />
 
-            <input type="submit" value="Go" />
+          <button id="current-location-button">Current Location</button>
+        </form>
+      </h4>
 
-            <button id="current-location-button">Current Location</button>
-          </form>
-        </h4>
+      <h3>
+        Weather for the coming hours
+      </h3>
 
-        <h3>
-          Weather for the coming hours
-        </h3>
-
-        <div class="row" id="coming-days"></div>
-      </div>
+      <div class="row" id="coming-days"></div>
     </div>
+    </div>  
+  </body>
+  
     <p id="link-text">
       Open source code
       <a id="link" href="https://github.com/Kiki-etta/firstProjectApp"
         >by Kiki-etta
       </a>
     </p>
+
+
     <script src="https://unpkg.com/axios/dist/axios.min.js" id="axios"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
